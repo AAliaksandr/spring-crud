@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:form="http://www.w3.org/1999/html" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h2>Add User</h2>
+<br>
+
+<form th:action="@{/save}" th:object="${user}" th:method="post">
+    <p>First name: <input type="text" th:field="*{firstName}"/></p>
+    <p>Last name: <input type="text" th:field="*{lastName}"/></p>
+    <p>Email: <input type="text" th:field="*{email}"/></p>
+    <p><input type="submit" value="Save user"/></p>
+</form>
+</body>
+</html>
